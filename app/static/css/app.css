@@ -1,3 +1,34 @@
 body {
     padding-top: 5rem;
 }
+
+.myContainer{
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.separating-margin{
+	margin-right: 100px;
+}
+.section-margin{
+	margin-bottom: 100px;
+}
+.section-border{
+	border: 1px solid black;
+	border-radius: 15px;	
+}
+
+.margin-move{
+	
+	margin-left: 200px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin: 24px;
+	position: relative;
+	left: 450px;
+}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="section-border">
+	<section class="bg-dark myContainer">
+		<br>
+		  <div class="text-center">
+			<img class="img-responsive col-md-offset-3" src="{{url_for('static', filename='photo.jpg')}}">
+			  </div>
+				<h1 class="text-center text-light"> Raniel Brown</h1>
+			  <p class="text-center text-light"> @rbrown </p>
+			<address class="text-center text-light"> Kingston, Jamaica</address>
+		  <p class="text-center text-light"></p>
+		
+	</section>
+	
+	<section>
+		<p style="padding: 25px;" class="lead col-md-offet-3"> I am a great and talented web developer who loves to design and develop websites. I am experienced in both front and back end development. I am well experienced in frameworks such as Bootstrap 4 React and jQuery.  Contact me if you want to work on a project</p>
+			
+			
+			<br>
+		
+		
+				<div class="row">
+						<div class="margin-move"></div>
+					
+						<div  class="col-md-3">
+							<h1>24</h1>
+							<h3> Post</h3>
+						</div>
+					
+
+					   <div class="col-md-3">
+							<h1>500</h1>
+							<h3> Following</h3>
+					   </div>
+
+				      <div class="col-md-3">
+						   <h1>560</h1>
+						   <h3> Followers</h3>
+				      </div>
+				</div>
+	<br><br>
+		
+		<div class="margin-move"></div>
+		<a class="btn btn-primary" href="#">Follow</a>
+	
+	</section>
+</div>
+
+{% endblock %}

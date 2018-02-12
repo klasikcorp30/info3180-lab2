@@ -35,6 +35,10 @@ def send_text_file(file_name):
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
 
+@app.route('/profile')
+def profile():
+	return render_template('profile.html')
+
 
 @app.after_request
 def add_header(response):
@@ -46,7 +50,6 @@ def add_header(response):
     response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
     response.headers['Cache-Control'] = 'public, max-age=0'
     return response
-
 
 @app.errorhandler(404)
 def page_not_found(error):
