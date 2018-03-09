@@ -7,6 +7,8 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+import datetime
+import calendar
 
 
 ###
@@ -25,6 +27,22 @@ def about():
     return render_template('about.html', name="Mary Jane")
 
 
+#def format_date_joined():
+ #   today = datetime.date.today()
+  #  date = calendar.month_name[today.month ], today.year
+   # return 
+    
+def format_date_joined():
+    now = datetime.datetime.now() # today's date
+    date_joined = datetime.date(2018, 2, 7) 
+    return  "Joined " + date_joined.strftime("%B, %Y") 
+ 
+
+@app.route('/profile')
+def profile():
+    date = format_date_joined()
+    return render_template('profile.html',date=date)
+
 ###
 # The functions below should be applicable to all Flask apps.
 ###
@@ -34,11 +52,6 @@ def send_text_file(file_name):
     """Send your static text file."""
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
-
-@app.route('/profile')
-def profile():
-	return render_template('profile.html')
-
 
 @app.after_request
 def add_header(response):
